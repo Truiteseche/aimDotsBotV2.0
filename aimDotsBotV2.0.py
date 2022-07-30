@@ -24,10 +24,10 @@ if userInput == "OK":
     pyautogui.moveTo(screenWidth / 2, screenHeight / 2)
     botRunning = True
     botToggle = True
-    FPS = 30
-    activeRegion = (384, 168, 1499, 976)
-    diameter = 180
-    precision = 10
+    FPS = 0
+    activeRegion = (355, 150, 1520, 1000)
+    diameter = 0.5
+    precision = 0
     x, y = activeRegion[0], activeRegion[1]
     # (x=384, y=168)
     # (x=1499, y=976)
@@ -41,7 +41,8 @@ if userInput == "OK":
             x += diameter - precision
             if x > activeRegion[2]-1:
                 x = activeRegion[0]
-                y += diameter - precision
+                y += 150
+                # diameter - precision
                 if y > activeRegion[3]-1:
                     y = activeRegion[1]
             # print(x, y)
